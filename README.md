@@ -6,6 +6,7 @@ Multi-model support: Utilizes Ollama for different language models<br />
 Web search integration: Uses DuckDuckGo and Tavily for up-to-date information retrieval<br />
 Local document search: Implements vector store using Chroma for efficient document retrieval<br />
 Conversation memory: Maintains context using ConversationBufferMemory<br />
+Load memory: Loads previous conversations thanks to the logs file<br />
 User authentication: Includes login and registration functionality<br />
 Multi-language support: Detects and responds in various languages<br />
 Audio response: Generates audio responses using gTTS<br />
