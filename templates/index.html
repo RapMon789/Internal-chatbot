@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Interface</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+</head>
+<body>
+    <h1>Emotionwave Chatbot</h1>
+    <div class="choice">
+        <label for="lang">Choose a language:</label>
+        <select id="lang">
+            <option value="English">English</option>
+            <option value="Korean">Korean</option>
+            <option value="French">French</option>
+            <option value="Thai">Thai</option>
+        </select>
+        <label for="models">Choose a model:</label>
+        <select id="models">
+            <option value="llama3:latest">llama3:latest</option>
+            <option value="llama3:8b-text-q6_K">llama3:8b-text-q6_K</option>
+            <option value="llama2:latest">llama2:latest</option>
+            <option value="mistral:latest">mistral:latest</option>
+        </select>
+    </div>
+    <div class="message-container" id="message-container"></div>
+    <div class="input-container">
+        <input type="text" id="user-input" placeholder="Type your message here...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+    <div class="load">
+        <button onclick="loadMemory()">Load Memory</button>
+    </div>
+    <a href="{{url_for('login')}}" class="logout" >Log out</a>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

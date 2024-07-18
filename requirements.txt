@@ -1,0 +1,12 @@
+flask
+flask_sqlalchemy
+flask_login
+flask_wtf 
+flask_bcrypt
+wtforms
+langchain_community
+langchain
+langchain_core
+IPython
+gtts
+langdetect
